@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="PaddingMaskTest.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PaddingMaskTest"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:ios="http://uno.ui/ios"
+    xmlns:toolkit="using:Uno.UI.Toolkit"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d ios">
+
+    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <RelativePanel.Style>
+            <Style TargetType="RelativePanel">
+                <ios:Setter Property="toolkit:VisibleBoundsPadding.PaddingMask" Value="All" />
+            </Style>
+        </RelativePanel.Style>
+		<TextBlock Text="Hello, world!" FontSize="30" />
+    </RelativePanel>
+
+    <!-- Grid works correctly. -->
+    <!--
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.Style>
+            <Style TargetType="Grid">
+                <ios:Setter Property="toolkit:VisibleBoundsPadding.PaddingMask" Value="All" />
+            </Style>
+        </Grid.Style>
+        <TextBlock Text="Hello, world!" FontSize="30" />
+    </Grid>
+    -->
+</Page>
